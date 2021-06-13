@@ -5,7 +5,7 @@ on:
 jobs:
   Deploy-sls-hola:
     runs-on: ubuntu-latest
-     steps:
+    steps:
      - uses: actions/checkout@v1
      - uses: actions/setup-node@v1
        with:
