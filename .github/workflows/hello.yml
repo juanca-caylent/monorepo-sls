@@ -6,4 +6,15 @@ jobs:
   Deploy-sls-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a service-2 deploy."
+     - uses: actions/checkout@v1
+     - uses: actions/setup-node@v1
+       with:
+         node-version: '12.x'
+     - name: Install Serverless Framework
+       run: npm install -g serverless
+     - name: Serverless AWS authentication
+       run: sls config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }}
+     - name: Deploy hello
+       run: |
+        cd hello
+        sls deploy -s dev
