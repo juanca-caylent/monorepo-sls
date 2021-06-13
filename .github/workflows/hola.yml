@@ -6,18 +6,18 @@ jobs:
   Deploy-sls-hola:
     runs-on: ubuntu-latest
      steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Install Serverless Framework
-      run: npm install -g serverless
-    - name: Serverless AWS authentication
-      run: sls config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }}
-    - name: Install NPM dependencies
-      run: npm install
-    # Optional
-    #- name: Build assets
-    #  run: npm run assets-prod
-    - name: Deploy Hola
-      run: sls deploy -s dev
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install Serverless Framework
+        run: npm install -g serverless
+      - name: Serverless AWS authentication
+        run: sls config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }}
+      - name: Install NPM dependencies
+        run: npm install
+      # Optional
+      #- name: Build assets
+      #  run: npm run assets-prod
+      - name: Deploy Hola
+        run: sls deploy -s dev
