@@ -20,4 +20,4 @@ jobs:
      #- name: Build assets
      #  run: npm run assets-prod
      - name: Deploy Hola
-       run: sls deploy -s dev
+       run: sls deploy -p hola/ -s dev
