@@ -1,4 +1,3 @@
-name: service-1
 on: 
  push:
     paths:
@@ -9,7 +8,6 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a service-1 deploy."
 
-name: service-2
 on: 
  push:
     paths:
