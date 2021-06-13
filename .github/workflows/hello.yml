@@ -1,9 +1,9 @@
 on: 
  push:
     paths:
-    - 'service-2/**'
+    - 'hello/**'
 jobs:
-  Deploy-sls-service2:
+  Deploy-sls-hello:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a service-2 deploy."
