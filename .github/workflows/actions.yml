@@ -4,7 +4,7 @@ on:
     paths:
     - 'service-1/**'
 jobs:
-  Deploy-sls:
+  Deploy-sls-service1:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a service-1 deploy."
@@ -15,7 +15,7 @@ on:
     paths:
     - 'service-2/**'
 jobs:
-  Deploy-sls:
+  Deploy-sls-service2:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a service-2 deploy."
