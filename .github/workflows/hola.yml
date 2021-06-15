@@ -18,6 +18,7 @@ jobs:
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET }}
        run: |
         cd hola
+        echo deploying hola serverless service
         sls deploy -s dev
         
 
